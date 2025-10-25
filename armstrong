@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int xona = 0;
+    for(int i = n; i != 0; i = i / 10){
+        xona++;
+    }
+    int sum = 0;
+    int son;
+    for(int i = n; i != 0; i = i / 10){
+        son = i % 10;
+        int daraja = 1;
+        for(int i = 0; i < xona; i++){
+            daraja = daraja * son;
+        }
+        sum = sum + daraja;
+    }
+    cout<<sum;
+    return 0;
+}
